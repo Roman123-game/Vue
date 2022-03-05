@@ -2,7 +2,7 @@
 <template>
 
   <div>
-   <post-form />
+   <post-form @create="createPost"/>
    <post-list :posts="posts"/>
   </div>
 </template>
@@ -21,18 +21,12 @@ export default {
         { id: 2, title: "javascript", body: "postDescription 2" },
         { id: 3, title: "javascript", body: "postDescription 3" },
       ],
-      title: "",
-      body: "",
+
     }
   },
   methods: {
-    createPost() {
-      const newPost = {
-        id: Date.now(),
-        title: this.title,
-        body: this.body,
-      }
-      this.posts.push(newPost);
+    createPost(post) {
+     this.post.push(post);
     },
   }
 }
