@@ -1,15 +1,19 @@
 <template>
-<div>
+<div class='postList'>
     <div>spisok polzovatelei</div>
-    <post-item :post="post" v-for="post in posts"/>
+    <post-task :post="post" v-for="post in posts"/>
  
+</div>
+<div class='post__btn'>
+<button class ='btn'>udalit</button>
+
 </div>
 </template>
 
 <script>
-import PostItem from '@/components/PostItem'
+import PostTask from "./PostTask.vue";
 export default {
-    components:{PostItem}
+    components : {PostTask},
     props: {
         posts: {
             type: Array,
@@ -19,6 +23,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style >
+.postList{
+    padding:5px;
+}
 </style>

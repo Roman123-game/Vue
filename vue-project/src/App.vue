@@ -9,10 +9,12 @@
 <script>
 import PostList from "@/components/PostList.vue";
 import PostForm from "@/components/PostForm.vue";
+import PostTask from "@/components/PostTask.vue"
 export default {
     components: {
         PostList,
         PostForm,
+         PostTask,
 
     },
     data() {
