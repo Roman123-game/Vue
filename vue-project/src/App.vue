@@ -2,6 +2,7 @@
 <div>
     <post-form @create="createPost" />
     <post-list :posts="posts" />
+  
 </div>
 </template>
 
@@ -11,7 +12,8 @@ import PostForm from "@/components/PostForm.vue";
 export default {
     components: {
         PostList,
-        PostForm
+        PostForm,
+
     },
     data() {
         return {
